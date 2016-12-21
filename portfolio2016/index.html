@@ -1,0 +1,477 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+	<title> Yerui Yu </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="images/yu.ico" media="screen" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+	
+	<nav class="navbar" role="navigation">
+		<input type="checkbox" id="nav-expand">
+		<input type="checkbox" id="nav-project--expand">
+		<div class="navbar-header">
+			<h2>Yerui Yu</h2>
+			<label class="nav-toggle" for="nav-expand" >
+
+				<span></span>
+			</label>
+		</div>
+		<ul class="navbar-list">
+			<li class="nav-list-item"><a href="#index">Home</a></li>
+			<li class="nav-list-item"><a href="#about">About</a></li>
+			<li class="nav-list-item">
+				<a href="#project">Projects</a>
+				<label for="nav-project--expand"></label>
+				<ul class="accordion-list">
+					<li class="accordion-list-item">
+						<input type="checkbox" name="projects" id="nav-accordion" />
+						<label for="nav-accordion"><a href="#project">Accordion</a></label>
+					</li>
+					<li class="accordion-list-item">
+						<input type="checkbox" name="projects" id="nav-name-card" />
+						<label for="nav-name-card"><a href="#project">Name Card</a></label>
+					</li>
+					<li class="accordion-list-item">
+						<input type="checkbox" name="projects" id="nav-form" />
+						<label for="nav-form"><a href="#project">Form</a></label>
+					</li>
+					<li class="accordion-list-item">
+						<input type="checkbox" name="projects" id="nav-product" />
+						<label for="nav-product"><a href="#project">Product List</a></label>
+					</li>
+					<li class="accordion-list-item">
+						<input type="checkbox" name="projects" id="nav-calculator" />
+						<label for="nav-calculator"><a href="#project">Calculator</a></label>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-list-item"><a href="#skill">Skills</a></li>
+			<li class="nav-list-item"><a href="#contact">Contact</a></li>
+			<li class="nav-list-item"><a><input type="text" class="nav-search" />
+				<label for="search-toggle"><i class="fa fa-search" aria-hidden="true" ></i></label>
+				<div class="search-placeholder"></div></a>
+			</li>
+
+		</ul>
+
+		<input type="radio" id="search-toggle" name="controller">
+		<input id="close-button-controller" type="radio" name="controller">
+		<div class="search-modal">
+
+			<div class="search-info"> 
+
+				<p class="card__subtitle">The search function is under construction.</p>
+				<label id="search-close-button" for="close-button-controller">OK</label>
+			</div>
+		</div>
+
+
+	</nav>
+
+
+
+
+	<section id="index">
+
+		<div class="index-intro">
+			<h1>Howdy.<span>|</span></h1>
+		</div>
+
+	</section>
+
+
+	<section id="about">
+		<h1>about</h1>
+		
+		<div class="about--display">
+			
+			<p class="about-info"><span class="about-name">My name is Yerui Yu.</span> I'm an aspiring web developer living in the Fort Worth, TX. I currently work as the web developer for Defender Outdoors, an online firearm retailer.</p>
+		</div>
+
+		
+
+	</section>	
+
+
+
+	<section id="project">
+
+		<h1>projects</h1>
+		<div class="tab-frame">
+			<input type="radio" name="project-list" id="project-1" checked/>
+			<input type="radio" name="project-list" id="project-2" />
+			<input type="radio" name="project-list" id="project-3" />
+			<input type="radio" name="project-list" id="project-4" />
+			<input type="radio" name="project-list" id="project-5" />
+
+			
+			<div class="tab">
+				<label for="project-1" class="tab-label">Accordions</label>
+				<label for="project-2" class="tab-label">Name Card</label>
+				<label for="project-3" class="tab-label">Form</label>
+				<label for="project-4" class="tab-label">Product List</label>
+				<label for="project-5" class="tab-label">Calculator</label>
+			</div>
+			
+			<div class="tab-content--display">
+
+
+				<div class="tab-content" id="accordion-content">
+					<h2>Accordion</h2>
+
+					<ul class="slider__content">
+
+						<input type="radio" name="slider__controller" id="controller-1" checked/>
+						<li class="slider__content-item">
+							<div class="item-holder">
+								<img src="images/accordion-1.png" class="img-responsive"alt="" />
+							</div>
+
+							<div class="slider-nav">
+								<label for="controller-3" class="slider-nav--pre">&#x2039;</label>
+								<label for="controller-2" class="slider-nav--next">&#x203a;</label>
+							</div>
+						</li>
+						
+
+						<input type="radio" name="slider__controller" id="controller-2" />
+						<li class="slider__content-item">
+							<div class="item-holder">
+								<img src="images/accordion-2.png" alt="" />
+							</div>
+							<div class="slider-nav">
+								<label for="controller-1" class="slider-nav--pre">&#x2039;</label>
+								<label for="controller-3" class="slider-nav--next">&#x203a;</label>
+							</div>
+
+						</li>
+						
+						
+						<input type="radio" name="slider__controller" id="controller-3" />
+						<li class="slider__content-item">
+							<div class="item-holder">
+								<ul class="accordion-list">
+									<li class="accordion-list-item">
+										<input type="checkbox" name="menu" id="appetizer" />
+										<label for="appetizer">appetizers</label>
+										<i class="fa fa-angle-down"  aria-hidden="true"></i>
+										<div class="accordion-content">
+											<h2>Check our tasty apps!</h2>
+											<h3>Happy hour menu - half off!!</h3>
+											<ul>
+												<li>Chicken Wings (6) - 5.99$</li>
+												<li>Calamari - 7.99$</li>
+												<li>Garlic breaded pickles - 4.59$</li>
+											</ul>
+										</div>
+									</li>
+									<li class="accordion-list-item">
+										<input type="checkbox" name="menu" id="entree" />
+										<label for="entree">entrees</label>
+										<i class="fa fa-angle-down"  aria-hidden="true"></i>
+										<div class="accordion-content">
+											<h2>Choose from a wide range of pastas,combos and signature dishes</h2>
+											<h3>Pastas</h3>
+											<ul>
+												<li>Chicken Picatta - 14.99$</li>
+												<li>Chicken Pollo - 12.99$</li>
+												<li>Lasagna - 10.99$</li>
+											</ul>
+										</div>
+									</li>
+									<li class="accordion-list-item">
+										<input type="checkbox" name="menu" id="desserts" />
+										<label for="desserts">Desserts</label>
+										<i class="fa fa-angle-down"  aria-hidden="true"></i>
+										<div class="accordion-content">
+											<h2>New Summer specials!!</h2>
+											<h3>Shakes and Ice Creams</h3>
+											<ul>
+												<li>Turtle Caramel Shake - 6.99$</li>
+												<li>Chocolate Brownie Bite - 4.99$</li>
+											</ul>
+										</div>
+									</li>
+									<li class="accordion-list-item">
+										<input type="checkbox" name="menu" id="soups-salads" />
+										<label for="soups-salads">soups & salads</label>
+										<i class="fa fa-angle-down"  aria-hidden="true"></i>
+										<div class="accordion-content">
+											<h2>Hot Deals!</h2>
+											<h3>Soup</h3>
+											<ul>
+												<li>Chicken Broth - 6.99$</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="slider-nav">
+								<label for="controller-2" class="slider-nav--pre">&#x2039;</label>
+								<label for="controller-1" class="slider-nav--next">&#x203a;</label>
+							</div>
+						</li>
+
+						<label class="slider__controller--dot" for="controller-1"></label>
+						<label class="slider__controller--dot" for="controller-2"></label>
+						<label class="slider__controller--dot" for="controller-3"></label>
+
+						
+					</ul>
+					<div class="tab-content__footer">
+						<p><i class="fa fa-tags" aria-hidden="true"></i>HTML,CSS3</p>
+						<i class="fa fa-external-link-square" aria-hidden="true"></i><a href="http://codepen.io/yyrcat/pen/PbZrEV" target="_blank">View Demo</a>
+					</div>
+					
+					
+				</div>
+				<div class="tab-content" id="name-card-content">
+					<h2>Name Card</h2>
+					<label>
+						<div class="card-container">
+							<input type="checkbox"  class="card-controller"/>
+							<div class="card-front">
+								<span class="name">Yerui Yu</span>
+								<small class="title">Student at Modern Developer, Career Path 1</small>
+								<p>I'm a Junior Web Developer and student at Modern Developer.</p>
+								<a href="mailto:yeruidacz@gmail.com" >yeruidacz@gmail.com</a>
+								<div class="card-contact">
+									<div class="encyclopedia">
+										<img src="https://s14.postimg.org/m5fx2v0xt/enc1.png" alt="" /><small>Yerui Yu Encyclopedia.MD</small>
+									</div>
+									<div class="social">
+										<img src="https://s22.postimg.org/r8jphi35d/github1.png" alt="" />
+										<img src="https://s18.postimg.org/42rvfefll/linkedin.png" alt="" />
+									</div>
+								</div>
+
+							</div>
+							<div class="card-back">
+								<img src="https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/1392052_1428742840674525_1510814167_n.jpg?oh=8c13fc1dec053ac9d8896979396c439c&oe=58C8C169" alt="" />
+								<small>Yerui Yu</small>
+							</div>
+						</div>
+					</label>
+					<div class="tab-content__footer">
+						<p><i class="fa fa-tags" aria-hidden="true"></i><span>HTML,CSS3</span></p>
+						<i class="fa fa-external-link-square" aria-hidden="true"></i><a href="http://codepen.io/yyrcat/pen/jVMNmL" target="_blank">View Demo</a>
+					</div>
+					
+					
+				</div>
+				<div class="tab-content" id="form-content">
+					<h2>Forms</h2>
+					<!--login-->
+					<form action="" id="login" novalidate>
+						
+						<a name="login"><h1>LOGIN</h1></a>
+
+						<span class="log-error" aria-live="polite"></span>
+						<input type="text" name="user" class="log-input" placeholder="User Name">
+						<span class="log-error" aria-live="polite"></span>
+						<input type="text" name="password" class="log-input" placeholder="Password">
+						<span class="log-error" aria-live="polite"></span>
+						<input type="text" name="ssn" class="log-input" placeholder="Last 4 digits of your SSN">
+						<input type="submit" value="SUBMIT" class="button log-spec">
+
+						
+					</form>
+					<div class="tab-content__footer">
+						<p><i class="fa fa-tags" aria-hidden="true"></i><span>HTML,CSS3,JavaScript</span></p>
+						<i class="fa fa-external-link-square" aria-hidden="true"></i><a href="http://blog.defenderoutdoors.com/" target="_blank">View Demo</a>
+					</div>
+
+					
+				</div>
+				<div class="tab-content" id="productr-content">
+					<h2>Shopping Cart</h2>
+					<img class="tab-content_img img-responsive" src="images/shoppingcart.png" alt="">
+					<div class="tab-content__footer">
+						<p><i class="fa fa-tags" aria-hidden="true"></i><span>HTML,CSS,JavaScript</span></p>
+						<i class="fa fa-external-link-square" aria-hidden="true"></i><a href="http://yyrcat.github.io/product-list/shopping-cart.html" target="_blank">View Demo</a>
+					</div>
+					
+					
+				</div>
+				<div class="tab-content" id="calculator-content">
+					<h2>Calculator</h2>
+					<div class="calculator-container">
+
+						<div id="cal-screen"><span>
+						</span></div>
+						<div class="cal-button">
+							<input type="button" value="1" >
+							<input type="button" value="2" >
+							<input type="button" value="3" >
+							<input type="button" value="DEL" class="cal-operator">
+							<input type="button" value="C" class="cal-operator">
+							<input type="button" value="4">
+							<input type="button" value="5">
+							<input type="button" value="6" >
+							<input type="button" value="*" class="cal-operator">
+							<input type="button" value="/" class="cal-operator">
+							<input type="button" value="7" >
+							<input type="button" value="8" >
+							<input type="button" value="9">
+							<input type="button" value="+" class="cal-operator">
+							<input type="button" value="-" class="cal-operator">
+							<input type="button" value="0" >
+							<input type="button" value="." >
+							<input type="button" value="1" >
+							<input type="button" value="=" >
+						</div>
+
+					</div>
+					<div class="tab-content__footer">
+						<p><i class="fa fa-tags" aria-hidden="true"></i><span>HTML,CSS3,JavaScript</span></p>
+						<i class="fa fa-external-link-square" aria-hidden="true"></i><a href="http://codepen.io/yyrcat/pen/GNmMBw" target="_blank">View Demo</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id="skill">
+		<h1>skills</h1>
+		<div class="skill-pie-chart">
+
+			<span>60% Frontend</span>
+			<svg width="150px" height="150px" class="pie-chart-1">
+				<circle r="75" cx="75" cy="75">
+				</svg>
+
+				<svg width="150px" height="150px" class="pie-chart-2">
+					<circle r="75" cx="75" cy="75">
+					</svg>
+					<span>15% Backend</span>		
+				</div>
+
+
+				<div class="skill-histogram">
+					<div class="skill-container">
+						<div class="skill-level">
+							<ul>
+								<li>Expert</li>
+								<li>Proficient</li>
+								<li>Competent</li>
+								<li>Learning</li>
+							</ul>
+						</div>
+						<div class="skill-frontend">
+							<h3>Frontend</h3>
+							<meter max="10" value="5" ></meter>
+							<meter max="10" value="5" ></meter>
+							<meter max="10" value="3" ></meter>
+							<meter max="10" value="3" ></meter>
+							<div class="skill-content">
+								<ul>
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>JS</li>
+									<li>JQuery</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+					<div class="skill-container">
+						<div class="skill-level">
+							<ul>
+								<li>Expert</li>
+								<li>Proficient</li>
+								<li>Competent</li>
+								<li>Learning</li>
+							</ul>
+						</div>
+						<div class="skill-backend">
+							<h3>Backend</h3>
+							<meter max="10" value="2" ></meter>
+							<meter max="10" value="3" ></meter>
+							<meter max="10" value="1" ></meter>
+							<meter max="10" value="1" ></meter>
+							<div class="skill-content">
+								<ul>
+									<li>PHP</li>
+									<li>SQL</li>
+									<li>Java</li>
+									<li>Node.js</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+			</section>
+
+			<section id="contact">
+
+				<h1></span>Contact Me</h1>
+
+
+				<div id="blowing">
+					<span class="bubble">
+						<span class="glow"></span>
+					</span>
+					<span class="bubble2">
+						<span class="glow"></span>
+					</span>
+					<span class="bubble3">
+						<span class="glow"></span>
+					</span>
+					<span class="bubble4">
+						<span class="glow"></span>
+					</span>
+				</div>
+
+				<label>
+					<div class="card-container">
+						<input type="checkbox"  class="card-controller"/>
+						<div class="card-front">
+							<span class="name">Yerui Yu</span>
+							<small class="title">Student at Modern Developer, Career Path 1</small>
+							<p>I'm a Junior Web Developer and student at Modern Developer.</p>
+							<a href="mailto:yeruidacz@gmail.com" >yeruidacz@gmail.com</a>
+							<div class="card-contact">
+								<div class="encyclopedia">
+									<img src="https://s14.postimg.org/m5fx2v0xt/enc1.png" alt="" /><small>Yerui Yu Encyclopedia.MD</small>
+								</div>
+								<div class="social">
+									<img src="https://s22.postimg.org/r8jphi35d/github1.png" alt="" />
+									<img src="https://s18.postimg.org/42rvfefll/linkedin.png" alt="" />
+								</div>
+							</div>
+
+						</div>
+						<div class="card-back">
+							<img src="https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/1392052_1428742840674525_1510814167_n.jpg?oh=8c13fc1dec053ac9d8896979396c439c&oe=58C8C169" alt="" />
+							<small>Yerui Yu</small>
+						</div>
+					</div>
+				</label>
+
+			</section>
+
+			<footer>
+				<p>© 2016 - Yerui Yu</p>
+			</footer>
+			<!--javascript-->
+			<script src="http://code.jquery.com/jquery-latest.min.js"></script>	
+			<script type="text/javascript" src="js/site.js"></script>
+			<script src="js/contact.js"></script>
+			<script src="js/validator.js"></script>
+			<script src="js/calculate.js"></script>
+		</body>
+		</html>
