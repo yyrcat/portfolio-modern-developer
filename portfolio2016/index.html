@@ -14,15 +14,16 @@
 
 	
 	<nav class="navbar" role="navigation">
+		<!--mobile navbar-->
 		<input type="checkbox" id="nav-expand">
 		<input type="checkbox" id="nav-project--expand">
 		<div class="navbar-header">
 			<h2>Yerui Yu</h2>
 			<label class="nav-toggle" for="nav-expand" >
-
 				<span></span>
 			</label>
 		</div>
+		<!--desktop navbar-->
 		<ul class="navbar-list">
 			<li class="nav-list-item"><a href="#index">Home</a></li>
 			<li class="nav-list-item"><a href="#about">About</a></li>
@@ -55,20 +56,20 @@
 			<li class="nav-list-item"><a href="#skill">Skills</a></li>
 			<li class="nav-list-item"><a href="#contact">Contact</a></li>
 			<li class="nav-list-item"><a><input type="text" class="nav-search" />
-				<label for="search-toggle"><i class="fa fa-search" aria-hidden="true" ></i></label>
+				<label for="search-modal--toggle"><i class="fa fa-search" aria-hidden="true" ></i></label>
 				<div class="search-placeholder"></div></a>
 			</li>
 
 		</ul>
-
-		<input type="radio" id="search-toggle" name="controller">
-		<input id="close-button-controller" type="radio" name="controller">
+		<!--search under construction modal-->
+		<input type="radio" id="search-modal--toggle" name="controller">
+		<input  type="radio" id="controller-button--close" name="controller">
 		<div class="search-modal">
 
 			<div class="search-info"> 
 
-				<p class="card__subtitle">The search function is under construction.</p>
-				<label id="search-close-button" for="close-button-controller">OK</label>
+				<p class="card-subtitle">The search function is under construction.</p>
+				<label id="search-button--close" for="controller-button--close">OK</label>
 			</div>
 		</div>
 

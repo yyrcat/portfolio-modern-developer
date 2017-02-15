@@ -1,0 +1,30 @@
+#index {
+height:70vh;
+background:url("../images/index-bg.png");
+background-attachment:fixed;
+}
+#index:before {
+	display: table;
+    content: " ";
+}
+.index-intro {
+width:14rem;
+margin:30vh auto;
+
+}
+.index-intro h1 {
+width:100%;
+white-space: nowrap;
+overflow: hidden;
+font-size:4em;
+@include vendor-prefix-webkit(animation,type 2s steps(60,end));
+}
+@include keyframes(type) {
+from { width: 0; }
+}
+.index-intro span {
+@include vendor-prefix-webkit(animation,blink 1s infinite);
+}
+@include keyframes(blink) {
+to {opacity:.0;}
+}

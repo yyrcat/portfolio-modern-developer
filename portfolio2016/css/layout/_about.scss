@@ -1,0 +1,85 @@
+#about{
+position:relative;
+margin:0;
+padding:3em 0;
+font-size:2em;
+background-color:#122C4D;
+background-attachment:fixed;
+h1 {
+margin:0;
+font-size:1.5em;
+text-align:center;
+text-shadow:1px 3px 2px black;
+}
+
+
+&:before {
+@extend %section-bg-psudo;
+top:-4em;
+left:0;
+background:url("../images/about-upper-bg.png") left top;
+}
+&:after {
+@extend %section-bg-psudo;
+bottom:-3.7em;
+left:0;
+background:url("../images/about-lower-bg.png") left top;
+}
+}
+
+
+.about--display {
+position:relative;
+top:0;
+left:50%;
+padding:1em;
+@include vendor-prefix-webkit(transform,translate(-50%,0));
+max-width:40em;
+}
+.front,
+.back {
+position: absolute;
+top:0;
+left:0;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+transition: transform .5s linear;
+}
+.card {
+float:left;
+position:relative;
+width:10rem;
+height:10rem;
+margin-right:1em;
+perspective: 1000px;
+.front {
+transform: rotateY(0deg);
+}
+.back {
+transform: rotateY(-180deg);
+}
+&:hover .front {
+transform: rotateY(180deg);
+}
+&:hover .back {
+transform: rotateY(0);
+}
+}
+
+
+.pic {
+
+width:10rem;
+border-radius:50%;
+border:10px solid #304359;
+}
+
+.about-name {
+color:#58B2DC;
+}
+.glyphicon-modify{
+display:inline-block;
+padding:0 0.4em;
+vertical-align:text-top;
+
+}
