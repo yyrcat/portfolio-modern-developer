@@ -1,0 +1,244 @@
+/*media query*/
+@media screen and (max-width:415px){
+   .nav-list {
+        width:80%;
+       
+    }
+	.nav-list-item {
+		display:inline-block;
+		width:100%;
+
+	}
+	.nav-list-item:last-child {
+		float:none;
+	}
+	.nav-list-item>a>.search-placeholder {
+	    display:none;
+	}
+	.navbar-header {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	width:100vw;
+	padding:0 1em;
+	min-height:3em;
+	box-sizing:border-box;
+	background-color:rgba(34, 34, 34,.8);
+	border-color:#080808;
+	border:1px solid transparent;
+	border-radius:0;
+	z-index:3;
+	}
+	.nav-toggle {
+	    position:relative;
+		width:2rem;
+		height:2rem;
+		text-align:center;
+		 input {
+		 
+		 }
+
+		 span {
+		 position:absolute;
+		 top:50%;
+		 left:50%;
+		 @include vendor-prefix-webkit(transform,translate(-50%,-50%));
+		 display:inline-block;
+		 width:2.5em;
+		 height:.5em;
+		 background-color:white;
+		 }
+		 span:before {
+		 display:inline-block;
+		 position:absolute;
+		 top:-1em;
+		 left:0;
+		 content:"";
+		 width:2.5em;
+		 height:.5em;
+		 background-color:white;
+		 }
+		 span:after {
+		  display:inline-block;
+		 position:absolute;
+		 bottom:-1em;
+		 left:0;
+		 content:"";
+		 width:2.5em;
+		 height:.5em;
+		 background-color:white;
+		 }
+
+	}
+
+	.nav-list-item:nth-child(3) {
+	 	label {
+	     display:inline-block;
+	 	 width:10em;
+	 	 height:1em;
+	 	 z-index:2;
+	 	}
+	 }  
+
+	  input[id="nav-expand"] ~ .navbar-list {
+			position:fixed;
+			top:4.5em;
+			left:-100%;
+			@include vendor-prefix-webkit(transition,left .5s cubic-bezier(.75,.09,.4,1.01));
+
+	  }
+	  input[id="nav-expand"]:checked ~ .navbar-list {
+	  		position:fixed;
+	  	    top:4.5em;
+			left:0;
+			@include vendor-prefix-webkit(transition,left .5s cubic-bezier(.75,.09,.4,1.01));
+	  }
+
+	  input[id="nav-expand"] {
+	 	& ~ .navbar-header {
+	 	 .nav-toggle {
+	 	 	span,
+	 	 	span:before,
+	 	 	span:after {
+	 	 		@include vendor-prefix-webkit(transition,all .3s linear);
+	 	 	}
+
+	 	 }
+	 	}
+	 }
+	 input[id="nav-expand"]:checked {
+	 	& ~ .navbar-header {
+	 	 .nav-toggle {
+	 	 	span {
+	 	 		background-color:transparent;
+	 	 	}
+	 	 	span:before {
+	 	 		@include vendor-prefix-webkit(transform,translateY(1em) rotateZ(45deg));
+	 	 		@include vendor-prefix-webkit(transition,transform .3s linear);
+	 	 	}
+	 	 	span:after {
+	 	 		@include vendor-prefix-webkit(transform,translateY(-1em) rotateZ(-45deg));
+	 	 		@include vendor-prefix-webkit(transition,transform .3s linear);
+	 	 	}
+	 	 }
+	 	}
+	 }
+	 input[id="nav-project--expand"] {
+	  & ~ .navbar-list {
+	   		.nav-list-item:nth-child(3) {
+	   			.accordion-list {
+	   				position:relative;
+	 				top:0;
+	 				left:10%;
+	 				width:70vw;	
+	 				height:0;
+	 				overflow:hidden;
+	 				@include vendor-prefix-webkit(transform,translate(0,0));
+	 				@include vendor-prefix-webkit(transition,all .5s cubic-bezier(.75,.09,.4,1.01));
+					.accordion-list-item {
+					    text-align:center;
+					    background-color:inherit;
+						border:none;
+					}
+					label {
+				 		text-transform:lowercase;
+	   				}
+	   		}
+	  }
+	 }
+	 }
+	
+	 input[id="nav-project--expand"]:checked {
+	  & ~ .navbar-list {
+	   		.nav-list-item:nth-child(3)  {
+	   			.accordion-list {
+	   				height:11em;
+	   				@include vendor-prefix-webkit(transition,all .5s cubic-bezier(.75,.09,.4,1.01));
+	   			}
+	   		}
+	  }
+	 }
+   /*search modal*/
+
+   #search-toggle  ~ .search-modal,
+#close-button-controller:checked ~  .search-modal {
+   .search-info {
+      max-width:100%;
+   }
+}
+  
+
+	 /*projects*/
+	 .card-container {
+	 	width:100%;
+	 }
+	 .calculator-container {
+	 	width:100%;
+	 	box-sizing:border-box;
+	 }
+	 .slider__content,
+	 .accordion-list{
+	 	width:100%;
+	 }
+	 .slider-nav {
+	 	display:none;
+	 }
+	 /*skill*/
+	
+	.pie-chart-1 {
+		margin-right:0;
+		margin-bottom:1em;
+	}
+	.skill-pie-chart span:first-child {
+		margin:0 0 1em 0;
+	}
+	.skill-pie-chart span:last-child {
+		margin-top:1em;
+
+	}
+
+	}
+@media screen and (max-width:768px){
+	
+	/*index*/
+ 
+
+  		.index-info {
+  		width:55%;
+  		font-size:3em;
+  		}
+ 
+  	
+
+	/*project tab*/
+	.tab-content {
+		width:100vw;
+		box-sizing:border-box;
+	}
+	
+	
+}
+
+@media screen and (min-width:414px) {
+	 input[id="nav-project--expand"]:checked,
+	 input[id="nav-project--expand"] {
+	  & ~ .navbar-list {
+	   		.nav-list-item:nth-child(3)  {
+	   			.accordion-list {
+	   				display:none;
+	   			}
+	   		}
+	  }
+	 }
+	 .nav-list-item:nth-child(3) {
+	 	label {
+	 	 display:none;
+	 	}
+	 }
+
+
+}

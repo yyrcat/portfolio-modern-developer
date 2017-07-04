@@ -37,20 +37,26 @@ text-align:center;
 display:block;
 padding:1em;
 margin-bottom:0;
-}
-.tab-label:hover {
-	background:#3076B2;
+cursor:pointer;
+@include vendor-prefix-webkit(transition,background .5s linear);
+&:hover {
+  background:#3076B2;
   @include vendor-prefix-webkit(transition,background .5s linear);
 }
+}
+
 #project-1:checked ~ .tab .tab-label:nth-of-type(1),
 #project-2:checked ~ .tab .tab-label:nth-of-type(2),
 #project-3:checked ~ .tab .tab-label:nth-of-type(3),
 #project-4:checked ~ .tab .tab-label:nth-of-type(4),
-#project-5:checked ~ .tab .tab-label:nth-of-type(5) {
+#project-5:checked ~ .tab .tab-label:nth-of-type(5),
+#project-6:checked ~ .tab .tab-label:nth-of-type(6),
+#project-7:checked ~ .tab .tab-label:nth-of-type(7),
+#project-8:checked ~ .tab .tab-label:nth-of-type(8) {
 
 color:white;
 background:#3076CC;
-transition:background .3s linear;
+@include vendor-prefix-webkit(transition,background .5s linear);
 }
 
 .tab-content {
@@ -65,8 +71,12 @@ padding:1em;
 		margin-top:1em;
 	}
 	a {
-		
 		color:white;
+    @include vendor-prefix-webkit(transition,color .3s ease-in-out);
+    &:hover {
+      color:#FFC408;
+      @include vendor-prefix-webkit(transition,color .3s ease-in-out);
+    }
 	}
 	i {
 		padding-right:.5em;
@@ -92,8 +102,10 @@ padding:1em;
 #project-2:checked ~ .tab-content--display .tab-content:nth-of-type(2),
 #project-3:checked ~ .tab-content--display .tab-content:nth-of-type(3),
 #project-4:checked ~ .tab-content--display .tab-content:nth-of-type(4),
-#project-5:checked ~ .tab-content--display .tab-content:nth-of-type(5)
-{
+#project-5:checked ~ .tab-content--display .tab-content:nth-of-type(5),
+#project-6:checked ~ .tab-content--display .tab-content:nth-of-type(6),
+#project-7:checked ~ .tab-content--display .tab-content:nth-of-type(7),
+#project-8:checked ~ .tab-content--display .tab-content:nth-of-type(8) {
 position:relative;
 display:block;
 background:#3076CC;
@@ -136,7 +148,7 @@ input[type*="radio"] {
 }
 .slider__controller--dot {
   position:absolute;
-  bottom:3%;
+  bottom:0;
   background:#ccc;
   width:.5em;
   height:.5em;
@@ -181,6 +193,7 @@ input[id*="controller"]:nth-of-type(3):checked ~ .slider__controller--dot:nth-of
 
 .slider-nav--pre,
 .slider-nav--next {
+  cursor:pointer;
   @include vendor-prefix-webkit(transition,opacity .5s ease-in-out);
 }
 
@@ -205,7 +218,10 @@ input[id*="controller"]:checked + .slider__content-item .slider-nav label {
   list-style:none;
   padding:0;
   label {
-  width:100%;
+   width:100%;
+   &:hover {
+   cursor:pointer;
+   }
   }
 }
 .accordion-list-item {
@@ -217,39 +233,47 @@ input[id*="controller"]:checked + .slider__content-item .slider-nav label {
 .accordion-list-item:last-child {
   border-bottom:none;
 }
-.accordion-list-item i {
-  position:absolute;
-  top:.7em;
-  right:1em;
-  padding:0;
-  @include vendor-prefix-webkit(transform,rotate(0deg));
-  @include vendor-prefix-webkit(transition,transform .5s linear);
-}
-input[type="checkbox"] {
-  display:none;
-}
-input[type="checkbox"]+label {
+
+
+.accordion__toggle {
   display:inline-block;
   padding:.5em;
   text-transform:uppercase;
  
 }
-input[type="checkbox"]:checked ~ .accordion-content{
-  height:12em;
+.accordion-list-item.accordion--hide i,
+.accordion-list-item  i  {
+  position:absolute;
+  top:.7em;
+  right:1em;
+  padding:0;
+ 
 }
-
-input[type="checkbox"]:checked ~ i {
+.accordion-list-item.accordion--hide i {
+   @include vendor-prefix-webkit(transform,rotate(0deg));
+  @include vendor-prefix-webkit(transition,transform .5s linear);
+}
+.accordion-list-item  i {
   @include vendor-prefix-webkit(transform,rotate(180deg));
   @include vendor-prefix-webkit(transition,transform .5s linear);
 }
+
 .accordion-content {
   padding:0 .5em;
-  height:0;
   color:#4B264B;
   background:#F3DECD;
-  overflow:hidden;
   box-sizing:border-box;
-   @include vendor-prefix-webkit(transition,height .5s linear);
+}
+
+.accordion-list-item.accordion--hide .accordion-content {
+    height:0;
+    overflow:hidden;
+    @include vendor-prefix-webkit(transition,height .5s linear);
+}
+.accordion-list-item .accordion-content{
+    height:8em;
+    overflow-y:auto;
+    @include vendor-prefix-webkit(transition,height .5s linear);
 }
 
 /*name card*/
@@ -309,10 +333,15 @@ input[type="checkbox"]:checked ~ i {
 
  
 .card-front {
-  padding:2em 1em;
+  padding:3em 1em;
   background-image: url('https://s11.postimg.org/541zuzzw3/bg3.png');
   background-size:cover;
   box-sizing:border-box;
+  i {
+    position:absolute;
+    top:1em;
+    right:1em;
+  }
 }
 
 .name {

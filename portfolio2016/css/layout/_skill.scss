@@ -7,11 +7,11 @@
 		@include h1Style;
 	}
 	&:after {
-@extend %section-bg-psudo;
-top:-7em;
-left:0;
-height:9em;
-background:url("../images/skill-upper-bg.png") left top;
+		@extend %section-bg-psudo;
+		top:-7em;
+		left:0;
+		height:9em;
+		background:url("../images/skill-upper-bg.png") left top;
 	}
 
 	&:before {
@@ -42,7 +42,7 @@ background:url("../images/skill-lower-bg.png") left top;
 }
 .skill-level {
 	position:relative;
-	top:6em;
+	top:3.5em;
 	left:1.5em;
 	ul {
 		padding-left:0;
@@ -69,24 +69,22 @@ background:url("../images/skill-lower-bg.png") left top;
 .pie-chart-1,
 .pie-chart-2 {
   @include vendor-prefix-webkit(transform,rotate(90deg));
-  background:#FFC408;
   border-radius: 50%;
 }
 .pie-chart-1 {
 	margin-right:5em;
 }
-.pie-chart-1 circle {
-	fill:#FFC408;
-	stroke:#0E82F3;
-	stroke-width:150;
-	stroke-dasharray:190 628;
-	
-}
+.pie-chart-1 circle,
 .pie-chart-2 circle {
 	fill:#FFC408;
 	stroke:#0E82F3;
 	stroke-width:150;
-	stroke-dasharray:400 628;
+}
+.pie-chart-1 circle {
+	stroke-dasharray:188.4 480;
+}
+.pie-chart-2 circle {
+	stroke-dasharray:400.35 480;
 }
 
 
@@ -97,7 +95,9 @@ background:url("../images/skill-lower-bg.png") left top;
 	height:15em;
 	margin:1em;
 	border-bottom:1px solid white;
-	
+	h3 {
+	text-align:center;
+	}
 	meter::-webkit-meter-bar {
   	background: none; 
 
@@ -108,7 +108,7 @@ background:url("../images/skill-lower-bg.png") left top;
 	width:10em;
 	height:2em;
 	border:none;
-  @include vendor-prefix-webkit(transform-origin,left bottom);
+    @include vendor-prefix-webkit(transform-origin,left bottom);
 	@include vendor-prefix-webkit(transform,rotate(-90deg));
 	&:nth-of-type(1) {
 	bottom:0;
@@ -123,88 +123,57 @@ background:url("../images/skill-lower-bg.png") left top;
  	left:7.5em;
 	}
 	&:nth-of-type(2)::-webkit-meter-optimum-value{
-	
-	background:#F6C555;
-}
+	background:#FB9966;
+	}
+
 	&:nth-of-type(3) {
 	bottom:0;
 	left:10em;
 	}
 	&:nth-of-type(3)::-webkit-meter-optimum-value{
-    
 	background:white;
-}
+    }
 	&:nth-of-type(4) {
 		bottom:0;
 		left:12.5em;
 	}
 	&:nth-of-type(4)::-webkit-meter-optimum-value{
-	
 	background:#DAC9A6;
 }
 }
 }
 
-.skill-frontend,
-.skill-backend {
-	meter {
-		&:nth-of-type(1):hover:before,
-		 &:nth-of-type(2):hover:before,
-		 &:nth-of-type(3):hover:before,
-		 &:nth-of-type(4):hover:before
-		  {
-		  	position:absolute;
-		  	top:50%;
-			padding:.7em 0;
-			width:10em;
-			height:2em;
-			text-align:center;
-			background-color:black;
-      @include vendor-prefix-webkit(transform,translate(-50%,-50%) rotate(90deg));
-			
-		}
-		&:nth-of-type(1):hover:after,
-		&:nth-of-type(2):hover:after,
-		&:nth-of-type(3):hover:after,
-		&:nth-of-type(4):hover:after {
-			content:"";
-			position:absolute;
-			top:1em;
-			border-left: .5em solid transparent;
-    		border-right: .5em solid transparent;
-    		border-top: 1em solid black;
-    	 @include vendor-prefix-webkit(transform,translate(-50%,-50%) rotate(90deg));
-		}
-}
-}
+
 .skill-frontend {
 	meter {
-		&:nth-of-type(1):hover:before,
-		 &:nth-of-type(2):hover:before
+	    &:nth-of-type(1):before,
+		&:nth-of-type(2):before
 		 {
-			content:"Very comfortable";
-			position:absolute;
+			
 			left:80%;
-			
-
 		}
-		&:nth-of-type(1):hover:after,
-		&:nth-of-type(2):hover:after {
-			left:6em;
-			
+
+	    &:nth-of-type(1):hover:before,
+		&:nth-of-type(2):hover:before {
+		   content:"Very comfortable";
 		}
 		
+		&:nth-of-type(1):after,
+		&:nth-of-type(2):after {
+			left:6em;	
+		}
+		 &:nth-of-type(3):before,
+		 &:nth-of-type(4):before {
+			left:60%;
+		 }
 		 &:nth-of-type(3):hover:before,
 		 &:nth-of-type(4):hover:before {
 			content:"Still learning";
-			left:60%;
 			
-
 		}
-		&:nth-of-type(3):hover:after,
-		&:nth-of-type(4):hover:after {
-			left:4em;
-    		
+		&:nth-of-type(3):after,
+		&:nth-of-type(4):after {
+			left:4em;		
 		}
 	}	
 }
@@ -212,29 +181,89 @@ background:url("../images/skill-lower-bg.png") left top;
 .skill-backend {
 	meter {
 
-		&:nth-of-type(1):hover:before {
-			content:"Just Starting";
+		&:nth-of-type(1):before {
 			left:50%;
 
 		}
-		&:nth-of-type(1):hover:after {
+		&:nth-of-type(1):hover:before {
+			content:"Just Starting";
+		}
+		&:nth-of-type(1):after {
 			left:3em;
+		}
+		&:nth-of-type(2):before {
+			left:60%;
 		}
 		&:nth-of-type(2):hover:before {
 			content:"Still learning";
-			left:60%;
+			
 		}
-		&:nth-of-type(2):hover:after {
+		&:nth-of-type(2):after {
 			left:4em;
+		}
+		&:nth-of-type(3):before,
+		&:nth-of-type(4):before {
+			left:40%;
 		}
 		&:nth-of-type(3):hover:before,
 		&:nth-of-type(4):hover:before {
 			content:"Just starting";
-			left:40%;
 		}
-		&:nth-of-type(3):hover:after,
-		&:nth-of-type(4):hover:after {
+		&:nth-of-type(3):after,
+		&:nth-of-type(4):after {
 			left:2em;
 		}
 	}
+}
+
+.skill-frontend,
+.skill-backend {
+	meter {
+	    &:nth-of-type(1):before,
+		&:nth-of-type(2):before,
+		&:nth-of-type(3):before,
+		&:nth-of-type(4):before {
+			content:"";
+			position:absolute;
+		  	top:50%;
+			padding:.7em 0;
+			width:10em;
+			height:1em;
+			text-align:center;
+			opacity:0;
+			background-color:black;
+			@include vendor-prefix-webkit(transform,translate(-45%,-50%) rotate(90deg));
+			@include vendor-prefix-webkit(transition,all .3s ease-in);
+		}
+		&:nth-of-type(1):after,
+		&:nth-of-type(2):after,
+		&:nth-of-type(3):after,
+		&:nth-of-type(4):after {
+			content:"";
+			position:absolute;
+			top:1em;
+			opacity:0;
+			border-left: .5em solid transparent;
+    		border-right: .5em solid transparent;
+    		border-top: 1em solid black;
+			@include vendor-prefix-webkit(transform,translate(20%,-50%) rotate(90deg));
+			@include vendor-prefix-webkit(transition,all .3s ease-in);
+		}
+		 &:nth-of-type(1):hover:before,
+		 &:nth-of-type(2):hover:before,
+		 &:nth-of-type(3):hover:before,
+		 &:nth-of-type(4):hover:before {
+		  	opacity:1;
+            @include vendor-prefix-webkit(transform,translate(-50%,-50%) rotate(90deg));
+			@include vendor-prefix-webkit(transition,all .3s ease-in);
+		}
+		&:nth-of-type(1):hover:after,
+		&:nth-of-type(2):hover:after,
+		&:nth-of-type(3):hover:after,
+		&:nth-of-type(4):hover:after {
+			opacity:1;
+    	    @include vendor-prefix-webkit(transform,translate(-20%,-50%) rotate(90deg));
+    	    @include vendor-prefix-webkit(transition,all .3s ease-in);
+		}
+}
 }

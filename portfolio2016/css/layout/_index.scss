@@ -1,30 +1,35 @@
 #index {
+@include flex(center);
 height:70vh;
 background:url("../images/index-bg.png");
 background-attachment:fixed;
+
+&:before {
+display: table;
+content: " ";
 }
-#index:before {
-	display: table;
-    content: " ";
-}
-.index-intro {
-width:14rem;
-margin:30vh auto;
 
 }
-.index-intro h1 {
-width:100%;
-white-space: nowrap;
+.index-info {
+width:15rem;
+text-align:center;
+white-space:nowrap;
 overflow: hidden;
 font-size:4em;
-@include vendor-prefix-webkit(animation,type 2s steps(60,end));
-}
-@include keyframes(type) {
-from { width: 0; }
-}
-.index-intro span {
+@include vendor-prefix-webkit(animation,type 1s steps(60,end));
+
+span {
 @include vendor-prefix-webkit(animation,blink 1s infinite);
 }
+
+}
+
+
+
+
+@include keyframes(type) {
+from { width:0; }
+}
 @include keyframes(blink) {
-to {opacity:.0;}
+to {opacity:0;}
 }

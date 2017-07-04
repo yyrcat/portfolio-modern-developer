@@ -1,5 +1,14 @@
 footer {
-	background-color:#2F60FF;
+	position:relative;
+	background-color:#58B2DC;
+	&:before {
+	    @extend %section-bg-psudo; 
+		top:-7em;
+		left:0;
+		height:9em;
+		background:url("../images/footer-upper-bg.png") left top;
+	
+	}
 	p{
 	 margin:0;
 	 padding:2em;

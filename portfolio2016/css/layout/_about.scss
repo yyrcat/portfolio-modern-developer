@@ -34,7 +34,7 @@ top:0;
 left:50%;
 padding:1em;
 @include vendor-prefix-webkit(transform,translate(-50%,0));
-max-width:40em;
+max-width:34em;
 }
 .front,
 .back {
